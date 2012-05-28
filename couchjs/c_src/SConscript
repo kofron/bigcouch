@@ -23,7 +23,8 @@ def runcmd(cmd):
     return commands.getstatusoutput(cmd)
 
 env = Environment(CC="c++", CCFLAGS='-g -O2 -DXP_UNIX',
-                        CPPPATH=os.getenv("CPPPATH"))
+    LINKFLAGS='-L/Users/kofron/Code/Consulting/BigCouchX/Core/core_root/lib',
+		         CPPPATH=os.getenv("CPPPATH"))
 
 if os.uname()[0] == 'SunOS':
    env['CC'] = '/usr/sfw/bin/gcc'
