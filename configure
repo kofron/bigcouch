@@ -18,7 +18,7 @@
 PREFIX="/opt/bigcouch"
 BIGCOUCH_USER=`whoami`
 ABSPATH="$(cd "${0%/*}" 2>/dev/null; echo "$PWD"/"${0##*/}")"
-DIRPATH="%%ROOTDIR"
+DIRPATH="%%ROOTDIR%%"
 
 while [ $# -gt 0 ]
 do
